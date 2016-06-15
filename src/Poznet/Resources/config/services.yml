@@ -1,0 +1,7 @@
+services:
+#    config.example:
+#        class: ConfigBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
+    configuration:
+        class: ConfigBundle\Service\ConfigService
+        arguments: [ "@doctrine.orm.entity_manager" ]
