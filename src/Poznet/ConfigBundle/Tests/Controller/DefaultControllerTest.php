@@ -1,6 +1,6 @@
 <?php
 
-namespace ConfigBundle\Tests\Controller;
+namespace Poznet\ConfigBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

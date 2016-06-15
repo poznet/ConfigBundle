@@ -1,6 +1,6 @@
 <?php
 
-namespace ConfigBundle\Repository;
+namespace Poznet\ConfigBundle\Repository;
 
 /**
  * ConfigRepository

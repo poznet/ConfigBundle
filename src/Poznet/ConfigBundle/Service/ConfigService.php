@@ -6,7 +6,7 @@
  * Time: 9:16 AM
  */
 
-namespace ConfigBundle\Service;
+namespace Poznet\ConfigBundle\Service;
 
 
 use ConfigBundle\Entity\Config;

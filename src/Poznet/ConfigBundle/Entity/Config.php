@@ -1,6 +1,6 @@
 <?php
 
-namespace ConfigBundle\Entity;
+namespace Poznet\ConfigBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 

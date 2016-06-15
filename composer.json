@@ -1,0 +1,19 @@
+{
+    "name": "poznet/configbundle",
+    "description": "Simple Configuration Handling in SF2 ",
+    "homepage": "https://github.com/poznet/ConfigBundle",
+    "license": "MIT",
+    
+    "require": {
+        "php": ">=5.3"
+       
+    },
+    "autoload": {         
+          "psr-0": { 
+              "Poznet\\ConfigBundle": "src"
+              }
+         
+         
+    } 
+
+}
