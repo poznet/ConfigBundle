@@ -1,6 +1,6 @@
 <?php
 
-namespace ConfigBundle;
+namespace Poznet\ConfigBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
