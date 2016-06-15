@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Config
  *
  * @ORM\Table(name="config")
- * @ORM\Entity(repositoryClass="ConfigBundle\Repository\ConfigRepository")
+ * @ORM\Entity(repositoryClass="Poznet\ConfigBundle\Repository\ConfigRepository")
  */
 class Config
 {
