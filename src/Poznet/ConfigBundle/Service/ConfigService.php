@@ -34,7 +34,7 @@ class ConfigService
      * @return null
      */
     public function get($name){
-        $config=$this->em->getRepository("ConfigBundle:Config")->findOneByName($name);
+        $config=$this->em->getRepository("PoznetConfigBundle:Config")->findOneByName($name);
         if(!$config)
             return null;
         return $config->getValue();
@@ -47,7 +47,7 @@ class ConfigService
      * @return bool
      */
     public function set($name,$value){
-        $config=$this->em->getRepository("ConfigBundle:Config")->findOneByName($name);
+        $config=$this->em->getRepository("PoznetConfigBundle:Config")->findOneByName($name);
         if(!$config) {
             $config = new Config();
             $config->setName($name);
