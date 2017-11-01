@@ -9,6 +9,7 @@
 namespace Poznet\ConfigBundle\Service;
 
 
+use Doctrine\Common\Cache\CacheProvider;
 use Poznet\ConfigBundle\Entity\Config;
 use Doctrine\ORM\EntityManager;
 
@@ -21,10 +22,12 @@ class ConfigService
 {
 
     private $em;
+    private $cache;
 
-    public function __construct(EntityManager $em)
+    public function __construct(EntityManager $em, CacheProvider $cache)
     {
         $this->em=$em;
+        $this->cache=$cache;
     }
 
 
@@ -34,9 +37,13 @@ class ConfigService
      * @return null
      */
     public function get($name){
+        if($this->cache->contains($name))
+            return $this->cache->fetch($name);
+
         $config=$this->em->getRepository("ConfigBundle:Config")->findOneByName($name);
         if(!$config)
             return null;
+        $this->cache->save($name,$config->getValue());
         return $config->getValue();
     }
 

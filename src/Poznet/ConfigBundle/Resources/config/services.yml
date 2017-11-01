@@ -2,4 +2,4 @@ services:
 
     configuration:
         class: Poznet\ConfigBundle\Service\ConfigService
-        arguments: [ "@doctrine.orm.entity_manager" ]
+        arguments: [ "@doctrine.orm.entity_manager","@doctrine.orm.default_query_cache" ]
