@@ -2,6 +2,7 @@
     "name": "poznet/configbundle",
     "description": "Simple Configuration Handling in SF2 ",
     "homepage": "https://github.com/poznet/ConfigBundle",
+    "keywords": ["symfony","symfony bundle","config","configuration",],
     "license": "MIT",
     
     "require": {
