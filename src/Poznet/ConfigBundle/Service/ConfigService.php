@@ -43,7 +43,7 @@ class ConfigService
         $config=$this->em->getRepository("ConfigBundle:Config")->findOneByName($name);
         if(!$config)
             return null;
-        $this->cache->save($name,$config->getValue());
+        $this->cache->save($name,$config->getValue(),3600);
         return $config->getValue();
     }
 
