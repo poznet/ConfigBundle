@@ -26,8 +26,8 @@ class ConfigService
 
     public function __construct(EntityManager $em, CacheProvider $cache)
     {
-        $this->em=$em;
-        $this->cache=$cache;
+        $this->em = $em;
+        $this->cache = $cache;
     }
 
 
@@ -36,14 +36,15 @@ class ConfigService
      * @param $name
      * @return null
      */
-    public function get($name){
-        if($this->cache->contains($name))
+    public function get($name)
+    {
+        if ($this->cache->contains($name))
             return $this->cache->fetch($name);
 
-        $config=$this->em->getRepository("ConfigBundle:Config")->findOneByName($name);
-        if(!$config)
+        $config = $this->em->getRepository("ConfigBundle:Config")->findOneByName($name);
+        if (!$config)
             return null;
-        $this->cache->save($name,$config->getValue(),3600);
+        $this->cache->save($name, $config->getValue(), 3600);
         return $config->getValue();
     }
 
@@ -53,21 +54,22 @@ class ConfigService
      * @param $value
      * @return bool
      */
-    public function set($name,$value){
-        $config=$this->em->getRepository("ConfigBundle:Config")->findOneByName($name);
-        if(!$config) {
+    public function set($name, $value)
+    {
+        $config = $this->em->getRepository("ConfigBundle:Config")->findOneByName($name);
+        if (!$config) {
             $config = new Config();
             $config->setName($name);
             $config->setValue($value);
             $this->em->persist($config);
 
-        }else{
+        } else {
             $config->setName($name);
             $config->setValue($value);
         }
         $this->em->flush();
         return true;
     }
-
-
 }
+
+
