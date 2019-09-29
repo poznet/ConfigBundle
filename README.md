@@ -16,19 +16,28 @@ Data are serializaed and stored in db.
 Use `composer require poznet/ConfigBundle`
 
 
+
 ## Usage
+
 Simple:
 
 `$this->get('configuration')->set('foo','bar');`   - saves 'bar' string  in configuration  with key 'foo'.Also you can save any type od data (variables, classes  etc. )
 
+
 To retrive data use: 
+
 `$x=$this->get('configuration')->get('foo');`
 
+
 Uasge with saveing config for multile objects
+
  `$this->get('configuration')->setFor('foo','objectName','bar');`
+ 
 
 To retrive data for object  use: 
+
 `$x=$this->get('configuration')->get('foo','objectName');`
+
 
 ### Licence 
 This Bundle is licensed under the MIT License. Feel free to contribute.
