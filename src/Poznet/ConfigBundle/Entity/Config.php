@@ -35,6 +35,11 @@ class Config
      */
     private $value;
 
+    /**
+     * @var
+     * @ORM\Column(name="for", type="string", nullable=true)
+     */
+    private $for;
 
     /**
      * Get id
@@ -93,4 +98,23 @@ class Config
     {
         return unserialize($this->value);
     }
+
+    /**
+     * @return mixed
+     */
+    public function getFor()
+    {
+        return $this->for;
+    }
+
+    /**
+     * @param mixed $for
+     */
+    public function setFor($for)
+    {
+        $this->for = $for;
+    }
+
+
+
 }

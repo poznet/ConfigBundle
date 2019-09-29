@@ -8,7 +8,7 @@ Simple Configuration handling   in SF
 Idea is really simple, doing anything  with symfony you need very often to save some config data.
 Parameters.yml are good , but it's  problematic to save item to them from application level.
  
-So based on WB/Presta experience i creates  simple service to store some data.
+So based on WP/Presta experience i creates  simple service to store some data.
  
 Data are serializaed and stored in db.
 
