@@ -98,6 +98,12 @@ class Config
     {
         return unserialize($this->value);
     }
+        
+    public function getRawValue()
+    {
+        return $this->value)
+            ;
+    }
 
     /**
      * @return mixed
