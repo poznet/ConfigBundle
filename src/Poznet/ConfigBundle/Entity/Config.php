@@ -37,7 +37,7 @@ class Config
 
     /**
      * @var
-     * @ORM\Column(name="for", type="string", nullable=true)
+     * @ORM\Column(name="forobject", type="string", nullable=true)
      */
     private $for;
 
