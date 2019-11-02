@@ -88,6 +88,13 @@ class Config
 
         return $this;
     }
+    
+     public function setRawValue($value)
+    {
+        $this->value = $value;
+
+        return $this;
+    }
 
     /**
      * Get value
@@ -101,8 +108,7 @@ class Config
         
     public function getRawValue()
     {
-        return $this->value)
-            ;
+        return $this->value;
     }
 
     /**
